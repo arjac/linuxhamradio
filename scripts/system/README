@@ -1,1 +1,6 @@
 SYSTEM README
+
+TODO
+
+- systemAptGet.sh: install automatically packages without confirmation,
+  avoid message "Do you want to continue [Y/n]?"
