@@ -25,6 +25,8 @@ export packageLibAx25Dev=libax25-dev
 
 export packageFestival="festival festlex-cmu festlex-poslex festvox-kallpc16k libestools1.2 festvox-ellpc11k"
 
+export packagePyPi="python-pip"
+
 # =============================================================================
 # Script Functions
 # =============================================================================
@@ -56,5 +58,7 @@ aptgetFunctionInstall $packageAx25Apps
 aptgetFunctionInstall $packageLibAx25Dev
 
 aptgetFunctionInstall $packageFestival
+
+aptgetFunctionInstall $packagePyPi
 
 # End of file
