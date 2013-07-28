@@ -6,7 +6,7 @@
 
 export aptgetName=apt-get
 export aptgetCommandUpdate=update
-export aptgetCommandInstall=install
+export aptgetCommandInstall="install --yes"
 
 # =============================================================================
 # Scripts Variables Local
@@ -23,6 +23,8 @@ export packageAx25Xtools=ax25-xtools
 export packageAx25Apps=ax25-apps
 export packageLibAx25Dev=libax25-dev
 
+export packageFestival="festival festlex-cmu festlex-poslex festvox-kallpc16k libestools1.2 festvox-ellpc11k"
+
 # =============================================================================
 # Script Functions
 # =============================================================================
@@ -32,7 +34,7 @@ aptgetFunctionUpdate() {
 }
 
 aptgetFunctionInstall() {
-	packageName=$1
+	packageName=$@
 	sudo $aptgetName $aptgetCommandInstall $packageName
 }
 
@@ -52,5 +54,7 @@ aptgetFunctionInstall $packageAx25Tools
 aptgetFunctionInstall $packageAx25Xtools
 aptgetFunctionInstall $packageAx25Apps
 aptgetFunctionInstall $packageLibAx25Dev
+
+aptgetFunctionInstall $packageFestival
 
 # End of file
