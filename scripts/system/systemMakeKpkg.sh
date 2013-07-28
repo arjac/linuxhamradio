@@ -21,6 +21,7 @@ export makeKpkgCommandClean=clean
 export makeName=make
 export makeCommandClean=clean
 export makeCommandMrproper=mrproper
+export makeCommandOldconfig=oldconfig
 
 # =============================================================================
 # Script Functions
@@ -41,6 +42,7 @@ makeKpkgFunctionClean() {
 
 makeKpkgFunctionCompile() {
 	cp /boot/config-`uname -r` .config
+	yes "" | $makeName $makeCommandOldconfig
 	CONCURRENCY_LEVEL=1 fakeroot $makeKpkgName --initrd --append-to-version=-`whoami` kernel_image kernel_headers
 }
 
