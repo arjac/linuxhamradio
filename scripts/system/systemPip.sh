@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -x
+
 # =============================================================================
 # Scripts Variables General
 # =============================================================================
@@ -14,6 +16,7 @@ export pipCommandUpgrade=--upgrade
 
 export packageDistribute=distribute
 export packageFeedparser=feedparser
+export packageMechanize=mechanize
 
 # =============================================================================
 # Script Functions
@@ -34,5 +37,6 @@ aptgetFunctionInstall() {
 
 aptgetFunctionInstall $packageDistribute
 aptgetFunctionInstall $packageFeedparser
+aptgetFunctionInstall $packageMechanize
 
 # End of file

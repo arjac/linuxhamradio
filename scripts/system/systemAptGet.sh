@@ -27,6 +27,8 @@ export packageFestival="festival festlex-cmu festlex-poslex festvox-kallpc16k li
 
 export packagePyPi="python-pip"
 
+export packagePop3="courier-authdaemon courier-authlib-mysql courier-pop courier-pop-ssl"
+
 # =============================================================================
 # Script Functions
 # =============================================================================
@@ -60,5 +62,7 @@ aptgetFunctionInstall $packageLibAx25Dev
 aptgetFunctionInstall $packageFestival
 
 aptgetFunctionInstall $packagePyPi
+
+aptgetFunctionInstall $packagePop3
 
 # End of file
